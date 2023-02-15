@@ -1,0 +1,23 @@
+<app-jumbotron [Titolo]="titolo" [SottoTitolo]="sottotitolo"></app-jumbotron>
+
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form">
+            <h3>Login</h3>
+            <div class="form-group">
+                <input type="text" class="form-control"  id="userId" placeholder="Nome Utente" [(ngModel)] = "user" >
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control"  id="password" placeholder="Password" [(ngModel)] = "psw">
+            </div>
+            <div class="form-group">
+                <button (click) = auth() class="btnSubmit">Connetti</button>
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf='!autenticato'>
+                {{err}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
