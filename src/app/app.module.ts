@@ -12,6 +12,7 @@ import { ArticoliComponent } from './pages/articoli/articoli.component';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { GridArticoliComponent } from './pages/grid-articoli/grid-articoli.component';
 import { ArtCardComponent } from './components/art-card/art-card.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ArtCardComponent } from './components/art-card/art-card.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

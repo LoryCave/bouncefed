@@ -1,5 +1,5 @@
 import { IArticoli } from './../../models/articoli';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-art-card',
@@ -19,9 +19,15 @@ export class ArtCardComponent {
     imageUrl: ''
   }
 
+  @Output() delete = new EventEmitter()
+  @Output() edit = new EventEmitter()
+
   constructor() { }
 
   ngOnInit(): void {
 
   }
+
+  editArt = () => this.edit.emit(this.articolo.codart)
+  delArt = () => this.delete.emit(this.articolo.codart)
 }
