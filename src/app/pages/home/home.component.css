@@ -1,0 +1,26 @@
+div.sep{
+    height: 15em;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.image {
+    flex-basis: 330px
+}
+
+.text {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Arial;
+}
+
+h1 {
+    font-size: 2em !important;
+    font-family: 'swiss721', Arial;
+}

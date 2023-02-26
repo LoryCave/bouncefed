@@ -1,13 +1,13 @@
-import { SalutiDataService } from './../../../services/data/saluti-data.service';
+import { SalutiDataService } from '../../../services/data/saluti-data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class WelcomeComponent {
+export class HomeComponent {
   constructor(private route: ActivatedRoute, private salutiSrv: SalutiDataService) { }   // per ricevere variabili //
 
   user: string = ''

@@ -1,19 +1,16 @@
-import { GridArticoliComponent } from './pages/grid-articoli/grid-articoli.component';
-import { RouteGuardService } from './../services/route-guard.service';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { ErrorComponent } from './pages/error/error.component';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
-import { ArticoliComponent } from './pages/articoli/articoli.component';
+import { NewsComponent } from './pages/news/news.component';
 
 const routes: Routes = [
-  {path:'', component: LoginComponent},
+  {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
-  {path:'welcome/:user', component: WelcomeComponent, canActivate: [RouteGuardService]},
-  {path:'articoli', component: ArticoliComponent, canActivate: [RouteGuardService]},
-  {path:'articoli/grid', component: GridArticoliComponent, canActivate: [RouteGuardService]},
+  {path:'home', component: HomeComponent},
+  {path:'news', component: NewsComponent},
   {path: 'logout', component: LogoutComponent},
   {path:'**', component: ErrorComponent}            // sempre l'ultimo elemento //
 ];
